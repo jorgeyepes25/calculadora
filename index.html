@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Compacta</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="screen" id="screen">0</div>
+    
+        <!-- Primera fila -->
+        <button class="button operator C" onclick="clearScreen()">C</button>
+        <button class="button operator" onclick="setOperation('*')">*</button>
+        <button class="button operator" onclick="setOperation('/')">/</button>
+        <button class="button operator del" onclick="deleteLast()">del</button>
+    
+        <!-- Segunda fila -->
+        <button class="button" onclick="appendNumber(1)">1</button>
+        <button class="button" onclick="appendNumber(2)">2</button>
+        <button class="button" onclick="appendNumber(3)">3</button>
+        <button class="button operator" onclick="setOperation('-')">-</button>
+    
+        <!-- Tercera fila -->
+        <button class="button" onclick="appendNumber(4)">4</button>
+        <button class="button" onclick="appendNumber(5)">5</button>
+        <button class="button" onclick="appendNumber(6)">6</button>
+        <button class="button operator" onclick="setOperation('+')">+</button>
+    
+        <!-- Cuarta fila -->
+        <button class="button" onclick="appendNumber(7)">7</button>
+        <button class="button" onclick="appendNumber(8)">8</button>
+        <button class="button" onclick="appendNumber(9)">9</button>
+        
+        <!-- El botón de igual debe ocupar dos filas -->
+        <button class="button operator equal" onclick="calculate()">=</button>
+    
+        <!-- Quinta fila -->
+        <button class="button zero" onclick="appendNumber(0)">0</button>
+        <button class="button" onclick="appendDot()">.</button>
+    </div>
+    
+    
+    
+    <!-- Ventana de historial -->
+    <div class="history" id="history"></div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
